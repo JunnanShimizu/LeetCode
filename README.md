@@ -1,2 +1,2 @@
 # LeetCode
-LeetCode Solutions
+A compilation of my LeetCode Solutions. Username: junnanshimizu 
