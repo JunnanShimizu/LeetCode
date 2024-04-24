@@ -4,13 +4,11 @@ class Solution:
         cur_sum = 0
         
         for n in nums:
-            cur_sum += n
-            max_sum = max(max_sum, cur_sum)
             if cur_sum < 0:
                 cur_sum = 0
-            else:
-                max_sum = max(max_sum, cur_sum)
-                
+            cur_sum += n
+            max_sum = max(max_sum, cur_sum)
+
         return max_sum
             
                 
