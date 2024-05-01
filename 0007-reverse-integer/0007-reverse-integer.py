@@ -1,19 +1,18 @@
 class Solution:
     def reverse(self, x: int) -> int:
-        strx = str(x)
-        new_string = ""
         negative = False
-        
-        for i in range(len(strx) - 1, -1, -1):
-            if strx[i] == "-":
-                negative = True
-            else:
-                new_string += strx[i]
-                
-        if negative:
-            new_string = "-" + new_string
+        if x < 0: 
+            negative = True
+            x *= -1
             
-        if int(new_string) >= 2**31 - 1 or int(new_string) <= -(2**31):
+        strx = str(x)[::-1]
+        
+        if(negative):
+            strx = "-" + strx
+            
+        if int(strx) >= 2**31 - 1 or int(strx) <= -(2**31):
             return 0
         else:
-            return int(new_string)
+            return int(strx)
+        
+        
