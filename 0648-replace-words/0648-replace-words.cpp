@@ -9,6 +9,7 @@ public:
             words.push_back(currentWord);
         }
         
+        std::string newSentence = "";
         for(std::string& word : words){
             for(std::string dictWord : dictionary){
                 if(word.substr(0, dictWord.length()) == dictWord){
@@ -17,10 +18,6 @@ public:
                     }
                 }
             }
-        }
-        
-        std::string newSentence = "";
-        for(std::string word : words){
             newSentence += word + " ";
         }
         
