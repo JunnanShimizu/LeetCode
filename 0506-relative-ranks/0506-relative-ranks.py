@@ -12,6 +12,6 @@ class Solution:
                 answer[max_index] = "Bronze Medal"
             else:
                  answer[max_index] = str(i + 1)
-            score[max_index] = min(score) - 1
+            score[max_index] = -1
             
         return answer
